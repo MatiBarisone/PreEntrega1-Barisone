@@ -1,0 +1,9 @@
+.itemList{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 30px;
+    font-size: x-large;
+    color: #373737;
+}

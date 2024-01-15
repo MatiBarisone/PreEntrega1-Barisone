@@ -1,0 +1,34 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #e4e2dd;
+    border-bottom: 4px solid #373737;
+}
+
+.navBar img {
+    width: 170px;
+}
+
+.buttons{
+    margin-right: 80px;
+    padding: 15px 30px;
+    background-color: #e4e2dd;
+}
+
+.buttons button{
+    margin-right: 30px;
+    margin-left: 30px;
+    background-color: #e4e2dd;
+    border: none;
+    font-size: 20px;
+    font-weight: 900;
+    color: #373737;
+}
+
+.buttons button:hover{
+    cursor: pointer;
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+}
