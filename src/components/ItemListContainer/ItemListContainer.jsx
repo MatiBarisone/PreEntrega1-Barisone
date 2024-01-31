@@ -1,27 +1,33 @@
 import "./itemListContainer.css";
 import ItemList from "../ItemList/ItemList";
 import { useState, useEffect } from "react";
-import { getProducts, getProductByCategory } from "../../serverMock/productMock";
+import {
+  getProducts,
+  getProductByCategory,
+} from "../../serverMock/productMock";
 import { useParams } from "react-router-dom";
+import Spinner from "../Commons/Spinner/Spinner"
 
-function ItemListContainer({ greeting , greetingText }) {
+function ItemListContainer({ greeting, greetingText }) {
   const [products, setProducts] = useState([]);
-
-  const {categoryID} = useParams();
+  const { categoryID } = useParams();
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    
-    const asyncFunc = categoryID ? getProductByCategory : getProducts
-    
+    const asyncFunc = categoryID ? getProductByCategory : getProducts;
+    setIsLoading(true)
     asyncFunc(categoryID)
       .then((response) => {
         setProducts(response);
-        console.log(response)
+        setIsLoading(false);
       })
       .catch((e) => {
         console.error(e);
+        setIsLoading(false);
       });
-  }, [categoryID]);
+  }, [categoryID, setIsLoading]);
+
+  if (isLoading) return <Spinner isLoading={isLoading}/>
 
   return (
     <div className="itemList">

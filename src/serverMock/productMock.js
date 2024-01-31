@@ -284,6 +284,8 @@ const products = [
 
 ];
 
+//============ EndPoints ===================
+
 export const getProducts = () => {
     return new Promise((resolve, reject) => {
         if (products.length === 0) {
@@ -292,7 +294,7 @@ export const getProducts = () => {
         else {
             setTimeout(() => {
                 resolve(products);
-            }, 1000);
+            }, 3000);
         }
     });
 }
@@ -301,7 +303,7 @@ export const getProductByID = (productID) => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products.find(prod => prod.id === productID));
-        }, 1000);
+        }, 3000);
     });
 }
 
@@ -309,6 +311,6 @@ export const getProductByCategory = (productCategory) => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products.filter(prod => prod.category === productCategory));
-        }, 1000);
+        }, 3000);
     });
 }
