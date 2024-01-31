@@ -1,0 +1,46 @@
+.counter{
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    padding-bottom: 5px;
+}
+
+.counter h4{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 15px;
+}
+
+.controls button{
+    font-size: 20px;
+    font-weight: 500;
+    color: #e4e4e4;
+    border: 15px solid #373737;
+    background-color: #373737;
+}
+
+.addButton{
+    font-size: 20px;
+    font-weight: 500;
+    color: #e4e4e4;
+    border: 12px solid #373737;
+    border-radius: 50px;
+    border-color: #373737;
+    background-color: #373737;
+    width: 100%;
+}
+
+.addButton:hover{
+    color: #373737;
+    background-color: #e4e4e4;
+    border-color: #e4e4e4;
+    cursor: pointer;
+}

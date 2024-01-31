@@ -11,13 +11,12 @@
     width: 170px;
 }
 
-.buttons{
+.navbuttons {
     margin-right: 80px;
-    padding: 15px 30px;
     background-color: #e4e2dd;
 }
 
-.buttons button{
+.navbuttons button {
     margin-right: 30px;
     margin-left: 30px;
     background-color: #e4e2dd;
@@ -25,10 +24,54 @@
     font-size: 20px;
     font-weight: 900;
     color: #373737;
+    padding-bottom: 25px;
+    padding-top: 25px;
 }
 
-.buttons button:hover{
+.navbuttons button:hover {
     cursor: pointer;
     text-decoration-line: underline;
     text-decoration-thickness: 3px;
+}
+
+
+/*--- drop down ---*/
+.subnav {
+    float: left;
+    overflow: hidden;
+}
+
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #e4e2dd;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 4px solid #373737;
+    padding-bottom: 15px;
+}
+
+.subnav-content button {
+    padding-left: 30px;
+    padding-right: 30px;
+    display: block;
+    width: 96%;
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+}
+
+.subnav-content button:hover {
+    background-color: #f7f5f2;
+    text-decoration-line: none;
+}
+
+.subnav:hover .subnav-content {
+    display: block;
+}
+
+.navBarLink {
+    text-decoration: none;
+    color: inherit;
 }
