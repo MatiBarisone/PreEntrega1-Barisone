@@ -3,8 +3,12 @@ import CardWidget from "../CartWidget/CartWidget";
 import Logo from "./assets/rajinLogo.png";
 import "./navBarStyle.css";
 import "animate.css";
+import { CartContext } from "../../context/CartContext";
+import { useContext } from "react";
 
 function NavBar() {
+  const { cart, sumQuantities } = useContext(CartContext);
+
   return (
     <nav className="navBar">
       <div>
@@ -17,7 +21,9 @@ function NavBar() {
         <div className="subnav">
           <button>ROPA</button>
           <div className="subnav-content animate__animated animate__fadeInDownBig">
-            <button>MIRAR TODO</button>
+            <NavLink to={"/subcategory/Ropa"} className="navBarLink">
+              <button>MIRAR TODO</button>
+            </NavLink>
             <NavLink to={"/category/Remera"} className="navBarLink">
               <button>REMERAS</button>
             </NavLink>
@@ -51,9 +57,7 @@ function NavBar() {
         </div>
       </div>
 
-      <div>
-        <CardWidget number={5} />
-      </div>
+      <div>{sumQuantities(cart) > 0 && <CardWidget />}</div>
     </nav>
   );
 }

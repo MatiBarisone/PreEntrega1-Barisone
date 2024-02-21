@@ -1,0 +1,14 @@
+.containerAddIcon {
+    position: relative;
+}
+
+.containerAddIcon button{
+    background-color: inherit;
+    border: none;
+}
+
+.containerAddIcon .addIcon {
+    font-size: 20px;
+    color: #373737;
+    cursor: pointer;
+}

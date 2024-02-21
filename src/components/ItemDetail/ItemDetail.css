@@ -1,0 +1,33 @@
+.counter{
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+}
+
+.counter h4{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 15px;
+}
+
+.goCart{
+    font-size: 20px;
+    font-weight: 500;
+    color: #e4e4e4;
+    border: 12px solid #373737;
+    border-radius: 50px;
+    border-color: #373737;
+    background-color: #373737;
+    width: 100%;
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.goCart:hover{
+    color: #373737;
+    background-color: #e4e4e4;
+    border-color: #e4e4e4;
+    cursor: pointer;
+}

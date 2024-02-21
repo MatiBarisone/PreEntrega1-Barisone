@@ -1,0 +1,15 @@
+.containerDeleteIcon {
+    position: relative;
+}
+
+.containerDeleteIcon button{
+    background-color: inherit;
+    border: none;
+}
+
+.containerDeleteIcon .deleteIcon {
+    font-size: 40px;
+    color: #373737;
+    cursor: pointer;
+}
+

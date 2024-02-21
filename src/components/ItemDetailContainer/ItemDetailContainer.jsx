@@ -14,7 +14,6 @@ const ItemDetailContainer = () => {
     getProductByID(parseInt(itemID))
       .then((response) => {
         setProduct(response);
-        console.log(typeof itemID)
         setIsLoading(false);
       })
       .catch((e) => {

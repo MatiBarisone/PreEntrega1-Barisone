@@ -314,3 +314,11 @@ export const getProductByCategory = (productCategory) => {
         }, 3000);
     });
 }
+
+export const getProductBySubcategory = (productSubcategory) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.filter(prod => prod.subcategory === productSubcategory));
+        }, 3000);
+    });
+}

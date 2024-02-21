@@ -1,8 +1,19 @@
-.action{
-    display: flex;
-    justify-content: space-evenly;
+.cartList{
+    display: grid;
     align-items: center;
-    margin-bottom: 11px;
+    text-align: center;
+    padding: 50px 30px;
+    font-size: x-large;
+    color: #373737;
+}
+
+.cartListTotal{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: x-large;
+    color: #373737;
 }
 
 .detailContainer{
@@ -31,4 +42,19 @@
     background-color: #e4e4e4;
     border-color: #e4e4e4;
     cursor: pointer;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.totalPrice{
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+
+.text{
+    padding-bottom: 15px;
 }

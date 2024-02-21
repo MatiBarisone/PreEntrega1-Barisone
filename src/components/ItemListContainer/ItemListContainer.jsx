@@ -4,19 +4,29 @@ import { useState, useEffect } from "react";
 import {
   getProducts,
   getProductByCategory,
+  getProductBySubcategory
 } from "../../serverMock/productMock";
 import { useParams } from "react-router-dom";
-import Spinner from "../Commons/Spinner/Spinner"
+import Spinner from "../Commons/Spinner/Spinner";
 
 function ItemListContainer({ greeting, greetingText }) {
   const [products, setProducts] = useState([]);
-  const { categoryID } = useParams();
+  const { categoryID, subcategoryID } = useParams();
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const asyncFunc = categoryID ? getProductByCategory : getProducts;
-    setIsLoading(true)
-    asyncFunc(categoryID)
+    let asyncFunc;
+
+    if (categoryID) {
+      asyncFunc = getProductByCategory;
+    } else if (subcategoryID) {
+      asyncFunc = getProductBySubcategory;
+    } else {
+      asyncFunc = getProducts;
+    }
+
+    setIsLoading(true);
+    asyncFunc(categoryID || subcategoryID)
       .then((response) => {
         setProducts(response);
         setIsLoading(false);
@@ -25,9 +35,9 @@ function ItemListContainer({ greeting, greetingText }) {
         console.error(e);
         setIsLoading(false);
       });
-  }, [categoryID, setIsLoading]);
+  }, [categoryID, subcategoryID, setIsLoading]);
 
-  if (isLoading) return <Spinner isLoading={isLoading}/>
+  if (isLoading) return <Spinner isLoading={isLoading} />;
 
   return (
     <div className="itemList">

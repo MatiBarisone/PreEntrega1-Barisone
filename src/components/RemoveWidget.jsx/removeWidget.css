@@ -1,0 +1,14 @@
+.containerRemoveIcon {
+    position: relative;
+}
+
+.containerRemoveIcon button{
+    background-color: inherit;
+    border: none;
+}
+
+.containerRemoveIcon .removeIcon {
+    font-size: 20px;
+    color: #373737;
+    cursor: pointer;
+}
