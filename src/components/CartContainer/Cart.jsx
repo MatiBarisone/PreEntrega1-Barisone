@@ -10,7 +10,8 @@ function Cart() {
   if (sumQuantities(cart) === 0) {
     return (
       <div className="cartList">
-        <h1 className="text">¡No hay items en el carrito!</h1>
+        <h1>¡No hay items en el carrito!</h1>
+        <p className="text" >Debes agregar algún producto para poder seguir con la transacción</p>
         <div className="detailContainer">
           <Link to="/">
             <button>Volver al inicio</button>

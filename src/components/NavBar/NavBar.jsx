@@ -39,20 +39,36 @@ function NavBar() {
         <div className="subnav">
           <button>ACCESORIOS</button>
           <div className="subnav-content animate__animated animate__fadeInDownBig">
-            <button>MIRAR TODO</button>
-            <button>MOCHILAS</button>
-            <button>GORROS</button>
-            <button>ANTEOJOS</button>
-            <button>MEDIAS</button>
+            <NavLink to={"/subcategory/Accesorios"} className="navBarLink">
+              <button>MIRAR TODO</button>
+            </NavLink>
+            <NavLink to={"/category/Mochila"} className="navBarLink">
+              <button>MOCHILAS</button>
+            </NavLink>
+            <NavLink to={"/category/Gorro"} className="navBarLink">
+              <button>GORROS</button>
+            </NavLink>
+            <NavLink to={"/category/Anteojo"} className="navBarLink">
+              <button>ANTEOJOS</button>
+            </NavLink>
+            <NavLink to={"/category/Medias"} className="navBarLink">
+              <button>MEDIAS</button>
+            </NavLink>
           </div>
         </div>
 
         <div className="subnav">
           <button>CALZADO</button>
           <div className="subnav-content animate__animated animate__fadeInDownBig">
-            <button>MIRAR TODO</button>
-            <button>ZAPATILLAS</button>
-            <button>ZAPATOS</button>
+            <NavLink to={"/subcategory/Calzado"} className="navBarLink">
+              <button>MIRAR TODO</button>
+            </NavLink>
+            <NavLink to={"/category/Zapatilla"} className="navBarLink">
+              <button>ZAPATILLAS</button>
+            </NavLink>
+            <NavLink to={"/category/Zapato"} className="navBarLink">
+              <button>ZAPATOS</button>
+            </NavLink>
           </div>
         </div>
       </div>

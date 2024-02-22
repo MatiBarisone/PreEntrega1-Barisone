@@ -1,11 +1,16 @@
-.counter{
-    display: block;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 20px;
+.flexContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.counter h4{
+.controls{
+    margin: 10px;
+    padding-bottom: 5px;
+}
+
+.controls h4{
     font-size: 20px;
     font-weight: 500;
     margin: 15px;
@@ -21,8 +26,6 @@
     background-color: #373737;
     width: 100%;
     text-decoration: none;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .goCart:hover{

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { getProductByID } from "../../serverMock/productMock";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import Spinner from "../Commons/Spinner/Spinner"
+import { getDoc, doc} from 'firebase/firestore'
+import { db } from '../../services/firebase/firebaseConfig.jsx'
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState(null);
@@ -11,15 +12,21 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     setIsLoading(true)
-    getProductByID(parseInt(itemID))
-      .then((response) => {
-        setProduct(response);
-        setIsLoading(false);
-      })
-      .catch((e) => {
-        console.error(e);
-        setIsLoading(false);
-      });
+
+    const docRef = doc(db, 'streetwear', itemID)
+
+    getDoc(docRef)
+    .then(response =>{
+      const data = response.data()
+      const productAdapted = { id: response.id, ...data }
+      setProduct(productAdapted)
+    })
+    .catch(e => {
+      console.log(e)
+    }).finally(()=>{
+      setIsLoading(false)
+    })
+
   }, [itemID]);
 
   if (isLoading) return <Spinner isLoading={isLoading}/>

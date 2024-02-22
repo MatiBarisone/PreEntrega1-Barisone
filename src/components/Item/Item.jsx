@@ -13,12 +13,12 @@ const Item = ({
   category,
   subcategory,
   price,
-  descrption,
+  description,
   img,
 }) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardMedia component="img" alt={descrption} height="300" image={img} />
+      <CardMedia component="img" alt={description} height="300" image={img} sx={{ padding: "1em 0 1em 0", objectFit: "contain"}}/>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {name}

@@ -1,13 +1,11 @@
 import "./itemListContainer.css";
 import ItemList from "../ItemList/ItemList";
 import { useState, useEffect } from "react";
-import {
-  getProducts,
-  getProductByCategory,
-  getProductBySubcategory
-} from "../../serverMock/productMock";
 import { useParams } from "react-router-dom";
 import Spinner from "../Commons/Spinner/Spinner";
+
+import { getDocs, collection, query, where } from 'firebase/firestore'
+import { db } from '../../services/firebase/firebaseConfig.jsx'
 
 function ItemListContainer({ greeting, greetingText }) {
   const [products, setProducts] = useState([]);
@@ -15,27 +13,33 @@ function ItemListContainer({ greeting, greetingText }) {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    let asyncFunc;
+    setIsLoading(true);
 
+    let collectionRef;
     if (categoryID) {
-      asyncFunc = getProductByCategory;
+      collectionRef = query(collection(db, 'streetwear'), where('category', '==', categoryID));
     } else if (subcategoryID) {
-      asyncFunc = getProductBySubcategory;
+      collectionRef = query(collection(db, 'streetwear'), where('subcategory', '==', subcategoryID));
     } else {
-      asyncFunc = getProducts;
+      collectionRef = collection(db, 'streetwear');
     }
 
-    setIsLoading(true);
-    asyncFunc(categoryID || subcategoryID)
-      .then((response) => {
-        setProducts(response);
-        setIsLoading(false);
+    getDocs(collectionRef)
+    .then(response => {
+      const productAdapted = response.docs.map(doc => {
+        const data = doc.data()
+        return {id: doc.id, ...data}
       })
-      .catch((e) => {
-        console.error(e);
-        setIsLoading(false);
-      });
-  }, [categoryID, subcategoryID, setIsLoading]);
+      setProducts(productAdapted)
+    })
+    .catch(e =>{
+      console.log(e)
+    })
+    .finally(() =>{
+      setIsLoading(false)
+    })
+    
+  }, [categoryID, subcategoryID, setIsLoading]); 
 
   if (isLoading) return <Spinner isLoading={isLoading} />;
 
