@@ -45,33 +45,33 @@ En Raijin Streetwear, nos esforzamos por proporcionar a nuestros clientes una ex
 
 **1.** **Navegación por Categorías:** Explora fácilmente nuestras colecciones de ropa, accesorios y calzado mediante los botones en la parte superior de la página. Estas a su vez se subdividen para poder filtrar los productos a preferencia del usuario.\
 Como se ve en la imagen:
-![alt text](image.png)
+![alt text](./assetsReadme/image.png)
 
 **2.** **Detalles del Producto:** Haz clic en "Ver Detalle" en cualquier producto para obtener más información del mismo, incluyendo Nombre, Descripción, Stock disponible y Precio x unidad.\
 Como se muestra en las siguientes imagenes:
-![alt text](image-1.png)
-![alt text](image-2.png)
+![alt text](./assetsReadme/image-1.png)
+![alt text](./assetsReadme/image-2.png)
 
 **3.** **Agregar al Carrito:** Una vez ingresado a la información del producto deseado, puedes agregar el mismo a tu "Carrito". Para poder realizar esta acción debes seleccionar la cantidad de unidades que quieres comprar.\
 Como se muestra en la siguiente imagen:
-![alt text](image-3.png)
+![alt text](./assetsReadme/image-3.png)
 
 **4.** **Ver tu Carrito:** Una vez clickeamos en el botón "Agregar al carrito", podremos o bien ir al carrito desde un nuevo botón que aprece o desde el icono de Carrito arriba a la derecha.\
 Como se muestra en la siguiente imagen:
-![alt text](image-4.png)
+![alt text](./assetsReadme/image-4.png)
 
 **5.** **Ver detalle del Carrito:** Cuando la persona termine de agregar todos sus productos al carrito, si desea ver su detalle solo debe tocar esos botones anteriormente mencionados y lo llevaran a su "Detalle del carrito". 
 Donde podrá ver sus productos, ver el subtotal de cada producto, el total a pagar y un botón para efectuar la transacción.
 A su vez, el usuario podrá decidir si aumentar la cantidad del producto, disminuirla, eleminarla por completo o mismo limpiar su carrito para no tener ningun producto.\
 Como se muestra en la siguiente imagen:
-![alt text](image-6.png)
+![alt text](./assetsReadme/image-6.png)
 
 [Volver a Tabla de Contenido](#tabla-de-contenido)
 
 ## Organización en Firebase:
 Toda nuestra base de datos esta subida a Firebase y seguimos la siguiente estrectura:
 
-![alt text](image-8.png)
+![alt text](./assetsReadme/image-8.png)
 
 Tenemos 2 collecciones:
 - **Orden:** Donde tenemos registro de todas las ordenes de compras hechas por los usuarios. Donde guardamos un ID que genera Firebase y dentro de este ID vamos a tener los "Datos del comprador" (nombre, apellido, email y telefono) y el "Carrito" (con todos los items que compró)
@@ -83,6 +83,6 @@ Tenemos 2 collecciones:
 ## React Tree:
 En la siguiente imagen se verá una representación grafica que ilustra la organización y jerarquia de los datos dentro del proyecto.
 
-![alt text](image-7.png)
+![alt text](./assetsReadme/image-7.png)
 
 [Volver a Tabla de Contenido](#tabla-de-contenido)
