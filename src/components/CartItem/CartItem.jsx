@@ -55,7 +55,7 @@ function CartItem({ items }) {
               </StyledTableCell>
               <StyledTableCell align="center">
                 <div className="addAndRemove">
-                  <RemoveWidget itemID={row.id} quantity={row.quantity} />{" "}
+                  <RemoveWidget itemID={row.id} quantity={row.quantity} />
                   {row.quantity}
                   <AddWidget
                     itemID={row.id}
@@ -69,8 +69,7 @@ function CartItem({ items }) {
                 {row.price * row.quantity}
               </StyledTableCell>
               <StyledTableCell align="center">
-                {" "}
-                <DeleteIconWidget itemID={row.id} />{" "}
+                <DeleteIconWidget itemID={row.id} />
               </StyledTableCell>
             </StyledTableRow>
           ))}

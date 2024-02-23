@@ -1,7 +1,5 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import ItemCount from "../ItemCount/ItemCount";
@@ -35,13 +33,19 @@ const ItemDetail = ({
 
   return (
     <div className="flexContainer">
-      <div>
+      <div style={{ padding: "0 3em 0 0" }}>
         <CardMedia
           component="img"
           alt={description}
           height="500"
           image={img}
-          sx={{ padding: "1em 0 1em 0", objectFit: "contain" }}
+          sx={{
+            padding: "1em 0 1em 0",
+            objectFit: "contain",
+            borderRadius: "10px",
+            boxShadow:
+              "0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19)",
+          }}
         />
       </div>
       <div>

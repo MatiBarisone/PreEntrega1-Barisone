@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Raijin Streetwear - Ecommerce
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tabla de Contenido
 
-## Available Scripts
+- [Descripción](#descripción)
+- [Instalación y uso](#instalación-y-uso)
+- [Dependencias](#dependencias)
+- [Funcionamiento de la página](#funcionamiento-de-la-página)
+- [Organización en Firebase](#organización-en-firebase)
+- [React Tree](#react-tree)
 
-In the project directory, you can run:
+## Descripción:
+Raijin Streetwear es tu nueva opción para sumergirte en el mundo de la moda urbana. Nos especializamos en ofrecer vestimenta de alta calidad, incluyendo ropa, accesorios y calzado que se enfocan en ofrecer una esencia de estilo único.
+
+Esta página web fue diseñada para poder empezar nuestro emprendimiento en el mundo del ecommerce, con el propósito de acercar nuestras exclusivas colecciones a un público más amplio por todo el país.
+
+[Volver a Tabla de Contenido](#tabla-de-contenido)
+
+## Instalación y uso:
+En el directorio del proyecto se pueden ejecutar los siguientes comandos:
+
+### `npm install`
+
+Este comando permite instalar todas las dependecias del proyecto.\
+Es necesario ejecutra este comando antes de ejecutar el `npm start` para que la página web funcione.
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Hace que la aplicación corra en modo desarollo.\
+Esto lo va a hacer en el puerto: [http://localhost:3000](http://localhost:3000)\
+Puedes hacer click en el link una vez ejecutado el comando para poder acceder a la página.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[Volver a Tabla de Contenido](#tabla-de-contenido)
 
-### `npm test`
+## Dependencias:
+- Material UI
+- Animate CSS
+- Firebase
+- React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Volver a Tabla de Contenido](#tabla-de-contenido)
 
-### `npm run build`
+## Funcionamiento de la página
+En Raijin Streetwear, nos esforzamos por proporcionar a nuestros clientes una experiencia de compra intuitiva y sin complicaciones. Aquí hay un vistazo al flujo de información de nuestro ecommerce:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**1.** **Navegación por Categorías:** Explora fácilmente nuestras colecciones de ropa, accesorios y calzado mediante los botones en la parte superior de la página. Estas a su vez se subdividen para poder filtrar los productos a preferencia del usuario.\
+Como se ve en la imagen:
+![alt text](image.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**2.** **Detalles del Producto:** Haz clic en "Ver Detalle" en cualquier producto para obtener más información del mismo, incluyendo Nombre, Descripción, Stock disponible y Precio x unidad.\
+Como se muestra en las siguientes imagenes:
+![alt text](image-1.png)
+![alt text](image-2.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**3.** **Agregar al Carrito:** Una vez ingresado a la información del producto deseado, puedes agregar el mismo a tu "Carrito". Para poder realizar esta acción debes seleccionar la cantidad de unidades que quieres comprar.\
+Como se muestra en la siguiente imagen:
+![alt text](image-3.png)
 
-### `npm run eject`
+**4.** **Ver tu Carrito:** Una vez clickeamos en el botón "Agregar al carrito", podremos o bien ir al carrito desde un nuevo botón que aprece o desde el icono de Carrito arriba a la derecha.\
+Como se muestra en la siguiente imagen:
+![alt text](image-4.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**5.** **Ver detalle del Carrito:** Cuando la persona termine de agregar todos sus productos al carrito, si desea ver su detalle solo debe tocar esos botones anteriormente mencionados y lo llevaran a su "Detalle del carrito". 
+Donde podrá ver sus productos, ver el subtotal de cada producto, el total a pagar y un botón para efectuar la transacción.
+A su vez, el usuario podrá decidir si aumentar la cantidad del producto, disminuirla, eleminarla por completo o mismo limpiar su carrito para no tener ningun producto.\
+Como se muestra en la siguiente imagen:
+![alt text](image-6.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Volver a Tabla de Contenido](#tabla-de-contenido)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Organización en Firebase:
+Toda nuestra base de datos esta subida a Firebase y seguimos la siguiente estrectura:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![alt text](image-8.png)
 
-## Learn More
+Tenemos 2 collecciones:
+- **Orden:** Donde tenemos registro de todas las ordenes de compras hechas por los usuarios. Donde guardamos un ID que genera Firebase y dentro de este ID vamos a tener los "Datos del comprador" (nombre, apellido, email y telefono) y el "Carrito" (con todos los items que compró)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Streetwear:** Donde tenemos registro de todos los productos que tenemos a disposición dentro de nuestro ecommerce. Cada uno de ellos tiene un numero como ID (como se ve en la imagen de arriba) y dentro de estos vamos a guardar sus datos (precio, nombre, descripción, etc.)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[Volver a Tabla de Contenido](#tabla-de-contenido)
 
-### Code Splitting
+## React Tree:
+En la siguiente imagen se verá una representación grafica que ilustra la organización y jerarquia de los datos dentro del proyecto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![alt text](image-7.png)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Volver a Tabla de Contenido](#tabla-de-contenido)

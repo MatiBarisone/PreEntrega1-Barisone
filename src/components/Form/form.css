@@ -1,0 +1,82 @@
+.text{
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.orderText{
+    margin-bottom: 15px;
+    text-align: center;
+    color: #e4e4e4;
+    border: 12px solid #373737;
+    border-color: #373737;
+    background-color: #373737;
+    text-align: center;
+    border-radius: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.text p {
+    font-size: 20px;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputField{
+    margin: 10px;
+}
+
+.submit{
+    color: #373737;
+    border: 12px solid #50C269;
+    border-color: #50C269;
+    background-color: #50C269;
+}
+
+.submit:hover{
+    color: #373737;
+    background-color: #63f783;
+    border-color: #63f783;
+    cursor: pointer;
+}
+
+.cancel{
+    color: #373737;
+    border: 12px solid #b45151;
+    border-color: #b45151;
+    background-color: #b45151;
+}
+
+.cancel:hover{
+    color: #373737;
+    background-color: #d66262;
+    border-color: #d66262;
+    cursor: pointer;
+}
+
+.formContainer button{
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.generalButton{
+    color: #e4e4e4;
+    border: 12px solid #373737;
+    border-color: #373737;
+    background-color: #373737;
+}
+
+.generalButton:hover{
+    color: #373737;
+    background-color: #e4e4e4;
+    border-color: #e4e4e4;
+    cursor: pointer;
+}
